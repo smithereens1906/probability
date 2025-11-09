@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post" class="row g-3">
+  <div class="col-md-3">
+    <label class="form-label">Rows</label>
+    <input type="number" class="form-control" name="rows" value="5" min="2" max="50" required>
+  </div>
+  <div class="col-md-3">
+    <label class="form-label">Columns</label>
+    <input type="number" class="form-control" name="cols" value="5" min="2" max="50" required>
+  </div>
+  <div class="col-md-3">
+    <label class="form-label">Mines</label>
+    <input type="number" class="form-control" name="mines" value="5" min="1" required>
+  </div>
+  <div class="col-md-3">
+    <label class="form-label">Iterations</label>
+    <input type="number" class="form-control" name="iters" value="1000" min="10" max="1000000" required>
+  </div>
+  <div class="col-md-4">
+    <label class="form-label">Random seed (optional)</label>
+    <input type="number" class="form-control" name="seed" placeholder="leave blank for random">
+  </div>
+  <div class="col-md-4 d-flex align-items-end">
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" name="annotate" id="annotate">
+      <label class="form-check-label" for="annotate">Annotate cells</label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Run Simulation</button>
+  </div>
+</form>
+{% endblock %}

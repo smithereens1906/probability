@@ -1,0 +1,113 @@
+/*  Mine Probability Simulator – unique neon-dark theme  */
+:root{
+  --bg:#111217;
+  --card:#1a1b23;
+  --accent:#00f2c3;
+  --accent2:#ff00c3;
+  --text:#e5e7eb;
+  --muted:#8a92a4;
+  --danger:#ff3d6d;
+  --success:#00f2c3;
+  --font:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:2rem 1rem;
+}
+
+h1{
+  font-weight:800;
+  letter-spacing:1px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:2rem;
+}
+
+/* forms */
+.form-control,.form-select{
+  background:var(--card);
+  border:1px solid var(--muted);
+  color:var(--text);
+  border-radius:8px;
+  transition:.3s;
+}
+.form-control:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 .2rem rgba(0,242,195,.25);
+}
+
+/* buttons */
+.btn-primary{
+  background:linear-gradient(45deg,var(--accent),var(--accent2));
+  border:none;
+  font-weight:700;
+  letter-spacing:.5px;
+  border-radius:30px;
+  padding:.55rem 1.8rem;
+  transition:.3s;
+}
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(0,242,195,.35);
+}
+
+/* cards */
+.list-group-item{
+  background:var(--card);
+  border-color:#2a2b36;
+}
+.progress{
+  background:#2a2b36;
+  border-radius:10px;
+  overflow:hidden;
+}
+.progress-bar{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  font-weight:700;
+}
+
+/* tables */
+.table-dark{
+  --bs-table-bg:#1a1b23;
+  --bs-table-border-color:#2a2b36;
+}
+.table-striped>tbody>tr:nth-of-type(odd)>*{
+  --bs-table-accent-bg:#21222b;
+}
+
+/* links */
+a{
+  color:var(--accent);
+}
+a:hover{
+  color:var(--accent2);
+}
+
+/* heat-map frame */
+.heatmap{
+  border:2px solid var(--accent);
+  border-radius:12px;
+  box-shadow:0 0 25px rgba(0,242,195,.35);
+}
+
+/* flash alert */
+.alert-warning{
+  background:var(--danger);
+  color:#fff;
+  border:none;
+  border-radius:8px;
+}
+
+/* footer spacing */
+.container{
+  max-width:960px;
+}
